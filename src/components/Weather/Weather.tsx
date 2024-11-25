@@ -1,14 +1,26 @@
-import axios from 'axios';
+import axios from "axios";
 
-const URL: string = 'https://api.openweathermap.org/data/2.5/weather';
-const API_KEY: string = 'f33a484cf794d08d0148764789aaba32';
+const URL: string = "https://api.openweathermap.org/data/2.5/weather";
+const API_KEY: string = "c6e381d8c7ff98f0fee43775817cf6ad";
 
 // fetch data of 7 days
 export const ForecastSevenDays = async (lat: string, lon: string) => {
   try {
     const response: any = await axios.get(
-      "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=minutely&appid=" + API_KEY
+      "https://api.openweathermap.org/data/2.5/forecast?lat=" +
+        lat +
+        "&lon=" +
+        lon +
+        "&appid=" +
+        API_KEY
+      // "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+      //   lat +
+      //   "&lon=" +
+      //   lon +
+      //   "&units=metric&exclude=minutely&appid=" +
+      //   API_KEY
     );
+    //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
     if (response) {
       return response;
     } else {
@@ -17,7 +29,7 @@ export const ForecastSevenDays = async (lat: string, lon: string) => {
   } catch (e) {
     console.error(e.error);
   }
-}
+};
 
 // to get the lon lat and then send to the forecast of 1 week, otherwise, we can just have the current weather
 const FetchData = async (query: any) => {
@@ -25,9 +37,9 @@ const FetchData = async (query: any) => {
     const response: any = await axios.get(URL, {
       params: {
         q: query,
-        units: 'metric',
-        APPID: API_KEY
-      }
+        units: "metric",
+        APPID: API_KEY,
+      },
     });
     if (response) {
       return response;
@@ -37,6 +49,5 @@ const FetchData = async (query: any) => {
   } catch (e) {
     console.error(e.error);
   }
-}
+};
 export default FetchData;
-
