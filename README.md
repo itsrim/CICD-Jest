@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-# CI-CD  and Jest demo : http://rim31.github.io/CICD-Jest
+# CI-CD  and Jest demo : http://itsrim.github.io/meteo
 Implementing Continous Integration and Deployement , with Jest, React, Travis - circleCI
 
 
@@ -13,7 +13,7 @@ modify : package.json
 
 add these :
 ```
-  "homepage": "http://rim31.github.io/CICD-Jest",
+  "homepage": "http://itsrim.github.io/meteo",
 ...
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
