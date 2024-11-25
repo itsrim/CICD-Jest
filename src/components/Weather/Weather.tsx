@@ -13,14 +13,7 @@ export const ForecastSevenDays = async (lat: string, lon: string) => {
         lon +
         "&appid=" +
         API_KEY
-      // "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-      //   lat +
-      //   "&lon=" +
-      //   lon +
-      //   "&units=metric&exclude=minutely&appid=" +
-      //   API_KEY
     );
-    //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
     if (response) {
       return response;
     } else {

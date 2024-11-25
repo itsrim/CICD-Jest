@@ -39,7 +39,7 @@ export default function SevenDays(props: any) {
                     style={{
                       backgroundColor: "#eafffd",
                       backdropFilter: "blur(5px)",
-                      width: "110px",
+                      width: "150px",
                       minHeight: "204px",
                       borderRadius: "8px",
                     }}
